@@ -33,19 +33,13 @@
   <body>
   	<%= render 'shared/navbar' %>
     <%= render 'shared/page_header' %>
-
-  
-
     <!-- Main Content -->
     <div class="container">
       <center>
         <%= yield %>
       </center>
     </div>
-
     <hr>
-
-
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'theme', 'data-turbolinks-track': 'reload' %>
   

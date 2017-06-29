@@ -9,8 +9,11 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+// Users scss No devise
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require materialize-sprockets
+//= require bootstrap-sprockets
+//= require_tree ./channels
+//= require chatrooms
+// require_tree .

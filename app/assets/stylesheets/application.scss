@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "chatrooms";
+@import "messages";
+@import "users";
+
+#messages {
+	overflow-y: auto;
+    height: 100%;
+}
+
+/*
+textarea.form-control {
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+*/
+
+#chatroom.panel {
+  height: 300px;
+}
+
+p.message {
+	word-break: break-all;
+}

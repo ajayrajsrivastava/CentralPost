@@ -33,7 +33,16 @@ module PostsHelper
 
 	def get_heading post
 
-		if controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'passwords'
+        if controller_name == 'chatrooms'
+        
+            if action_name == 'index'
+                heading  = 'Chat Bizz' 
+            else
+                heading = params[:slug]
+            end
+        
+
+		elsif controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'passwords'
 			heading = 'Blogger'
 
 		elsif action_name == 'index' 
@@ -57,7 +66,10 @@ module PostsHelper
 
     def get_subheading post
 
-    	if controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'passwords'
+        if controller_name == 'chatrooms'
+            subheading = 'Discuss ideas, opinions, debates etc'
+
+    	elsif controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'passwords'
     		subheading = 'Create | Read | Update | Delete Blogs'
 
     	elsif action_name == 'index' 

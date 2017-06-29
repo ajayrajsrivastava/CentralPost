@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.page(params[:page]).per(10).order(created_at: :desc)
+    @posts = params[:q].present? ? Post.page(params[:page]).per(10).order(created_at: :desc).where("title like ? or content like ?","%#{params[:q]}%","%#{params[:q]}%") : Post.page(params[:page]).per(10).order(created_at: :desc)
   end
 
   # GET /posts/1
