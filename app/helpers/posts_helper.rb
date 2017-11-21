@@ -43,11 +43,11 @@ module PostsHelper
         
 
 		elsif controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'passwords'
-			heading = 'Blogger'
+			heading = 'The Central Post'
 
 		elsif action_name == 'index' 
-        	heading = 'Blogger'
-
+        	heading = 'The Central Post'
+            
         elsif action_name == 'new'
         	heading = 'New Post'
 		
@@ -70,10 +70,10 @@ module PostsHelper
             subheading = 'Discuss ideas, opinions, debates etc'
 
     	elsif controller_name == 'registrations' || controller_name == 'sessions' || controller_name == 'passwords'
-    		subheading = 'Create | Read | Update | Delete Blogs'
+    		subheading = 'Share & Discuss Ideas | News | Stories'
 
     	elsif action_name == 'index' 
-        	subheading = 'Create | Read | Update | Delete Blogs'
+        	subheading = 'Share & Discuss Ideas | News | Stories'
 
         elsif action_name == 'new'
         	subheading = 'Have thoughts? Create a post.'

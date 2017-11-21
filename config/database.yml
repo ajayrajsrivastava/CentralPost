@@ -23,8 +23,10 @@ default: &default
 
 development:
   <<: *default
-  username: postgres
-  password: nga@database
+  adapter: postgresql
+  username: pguser
+  host: localhost
+  password: lucknow123
   database: blog_development
 
 # Warning: The database defined as "test" will be erased and
@@ -32,8 +34,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  username: postgres
-  password: nga@database
+  adapter: postgresql
+  username: pguser
+  host: localhost
+  password: lucknow123
   database: blog_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -56,7 +60,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  adapter: postgresql
   <<: *default
   database: blog_production
-  username: myapp
+  username: pguser
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
